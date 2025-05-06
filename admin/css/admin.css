@@ -1,0 +1,414 @@
+/**
+ * Printful Resources Admin CSS
+ */
+
+/* Dashboard */
+.printful-dashboard {
+    margin-top: 20px;
+}
+
+.printful-dashboard-header,
+.printful-dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.printful-store-info {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.printful-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin: 10px;
+    padding: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.printful-actions {
+    margin-top: 15px;
+}
+
+.printful-actions .button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.printful-sync-status {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Settings */
+.printful-settings {
+    margin-top: 20px;
+}
+
+.printful-settings-tabs .tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.printful-settings-tabs .tab-content.active {
+    display: block;
+}
+
+.connection-status {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 28px;
+}
+
+/* API Settings */
+.form-table .test-connection-btn {
+    margin: 5px 0;
+}
+
+.form-table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form-table tr:last-child {
+    border-bottom: none;
+}
+
+/* Products */
+.printful-products-controls {
+    margin-bottom: 20px;
+}
+
+.printful-sync-controls {
+    margin-bottom: 15px;
+}
+
+.sync-status {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.printful-sync-results {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.printful-products-table .not-synced {
+    color: #a00;
+    font-style: italic;
+}
+
+/* Orders */
+.printful-orders-table .order-status {
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: #f9f9f9;
+    display: inline-block;
+}
+
+.printful-orders-table .status-shipped,
+.printful-orders-table .status-fulfilled {
+    background: #c6e1c6;
+    color: #5b841b;
+}
+
+.printful-orders-table .status-failed,
+.printful-orders-table .status-canceled {
+    background: #eba3a3;
+    color: #761919;
+}
+
+.printful-orders-table .status-onhold {
+    background: #f8dda7;
+    color: #94660c;
+}
+
+.printful-orders-table .status-inprocess,
+.printful-orders-table .status-pending,
+.printful-orders-table .status-draft {
+    background: #e5e5e5;
+    color: #777;
+}
+
+/* Order meta box */
+.printful-actions {
+    margin-top: 10px;
+}
+
+.printful-actions .button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Store Information */
+.store-info {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.store-info p {
+    margin: 5px 0;
+}
+
+/* Product sync display */
+.printful-products-table {
+    margin-top: 20px;
+}
+
+.printful-products-table th {
+    font-weight: 600;
+}
+
+.printful-products-table .sync-status {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.printful-products-table .sync-status.synced {
+    color: #46b450;
+}
+
+.printful-products-table .sync-status.not-synced {
+    color: #dc3232;
+}
+
+.printful-products-table .dashicons-yes-alt {
+    color: #46b450;
+    margin-right: 5px;
+}
+
+.printful-products-table .dashicons-no-alt {
+    color: #dc3232;
+    margin-right: 5px;
+}
+
+.printful-products-table .wc-product-info {
+    margin-top: 5px;
+    margin-left: 20px;
+    color: #555;
+}
+
+.printful-products-table .variant-count {
+    display: inline-block;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.printful-products-table .product-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.printful-products-table .product-actions .button {
+    display: flex;
+    align-items: center;
+}
+
+.printful-products-table .product-actions .dashicons {
+    margin-right: 3px;
+}
+
+.printful-products-table .no-image {
+    width: 50px;
+    height: 50px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+.printful-products-table .product-id {
+    margin-top: 3px;
+    color: #666;
+}
+
+/* Spinner animation for updates */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+    display: inline-block;
+}
+
+/* Product Grid List View */
+.printful-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.printful-product-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.printful-product-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-image .no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.product-image .no-image .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+}
+
+.product-details {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.product-meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-meta > div {
+    margin-bottom: 5px;
+}
+
+.product-meta strong {
+    font-weight: 500;
+    display: inline-block;
+    min-width: 70px;
+}
+
+.sync-status-wrapper {
+    margin-top: auto;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.printful-product-item .sync-status {
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.printful-product-item .sync-status.synced {
+    color: #46b450;
+}
+
+.printful-product-item .sync-status.not-synced {
+    color: #dc3232;
+}
+
+.printful-product-item .wc-product-info {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+}
+
+.printful-product-item .wc-product-info span {
+    font-weight: 500;
+}
+
+.printful-product-item .variant-count {
+    display: inline-block;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.printful-product-item .product-actions {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.printful-product-item .product-actions .button {
+    flex: 1;
+    justify-content: center;
+    min-width: 80px;
+    text-align: center;
+}
+
+.product-error {
+    grid-column: 1 / -1;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+/* Media queries for responsive display */
+@media screen and (max-width: 782px) {
+    .printful-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .printful-products-grid {
+        grid-template-columns: 1fr;
+    }
+} 

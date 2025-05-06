@@ -1,0 +1,760 @@
+# Copyright (C) 2023 Your Name
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Printful Resources 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/printful-resources\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-08-01T12:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: printful-resources\n"
+
+#. Plugin Name of the plugin
+msgid "Printful Resources"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://developers.printful.com/docs/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Sync products from Printful to WooCommerce, manage order fulfillment and shipping"
+msgstr ""
+
+#. Author of the plugin
+msgid "Your Name"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://yourwebsite.com"
+msgstr ""
+
+#: admin/class-printful-admin.php:43
+#: admin/class-printful-admin.php:44
+msgid "Printful"
+msgstr ""
+
+#: admin/class-printful-admin.php:53
+#: admin/class-printful-admin.php:54
+msgid "Dashboard"
+msgstr ""
+
+#: admin/class-printful-admin.php:62
+#: admin/class-printful-admin.php:63
+msgid "Products"
+msgstr ""
+
+#: admin/class-printful-admin.php:71
+#: admin/class-printful-admin.php:72
+msgid "Orders"
+msgstr ""
+
+#: admin/class-printful-admin.php:80
+#: admin/class-printful-admin.php:81
+msgid "Settings"
+msgstr ""
+
+#: admin/class-printful-admin.php:125
+msgid "Connection successful!"
+msgstr ""
+
+#: admin/class-printful-admin.php:126
+msgid "Connection failed: "
+msgstr ""
+
+#: admin/class-printful-admin.php:127
+msgid "Synchronization started..."
+msgstr ""
+
+#: admin/class-printful-admin.php:128
+msgid "Synchronization completed."
+msgstr ""
+
+#: admin/class-printful-admin.php:129
+msgid "Synchronization failed: "
+msgstr ""
+
+#: admin/class-printful-admin.php:130
+msgid "Are you sure?"
+msgstr ""
+
+#: admin/class-printful-admin.php:262
+#: admin/class-printful-admin.php:358
+#: admin/class-printful-admin.php:429
+msgid "Security check failed"
+msgstr ""
+
+#: admin/class-printful-admin.php:267
+#: admin/class-printful-admin.php:363
+#: admin/class-printful-admin.php:434
+msgid "You do not have permission to do this"
+msgstr ""
+
+#: admin/class-printful-admin.php:296
+msgid "Sync completed with errors"
+msgstr ""
+
+#: admin/class-printful-admin.php:300
+msgid "Sync completed successfully"
+msgstr ""
+
+#: admin/class-printful-admin.php:383
+#: admin/class-printful-admin.php:403
+msgid "Invalid order ID"
+msgstr ""
+
+#: admin/class-printful-admin.php:388
+msgid "Order not found"
+msgstr ""
+
+#: admin/class-printful-admin.php:401
+msgid "Failed to create Printful order"
+msgstr ""
+
+#: admin/class-printful-admin.php:405
+msgid "Order sent to Printful successfully"
+msgstr ""
+
+#: admin/class-printful-admin.php:420
+msgid "No Printful order found"
+msgstr ""
+
+#: admin/class-printful-admin.php:432
+msgid "Printful order cancelled"
+msgstr ""
+
+#: admin/class-printful-admin.php:435
+msgid "Order cancelled successfully"
+msgstr ""
+
+#: admin/class-printful-admin.php:460
+msgid "Invalid response from Printful API"
+msgstr ""
+
+#: admin/class-printful-admin.php:476
+msgid "Printful order status updated: %s"
+msgstr ""
+
+#: admin/class-printful-admin.php:493
+msgid "Order status refreshed"
+msgstr ""
+
+#: admin/class-printful-admin.php:507
+#: admin/views/order-meta-box.php:73
+msgid "Printful Order"
+msgstr ""
+
+#: admin/views/dashboard.php:1
+msgid "Printful Dashboard"
+msgstr ""
+
+#: admin/views/dashboard.php:7
+msgid "Please set up your Printful API key in the Settings tab to start using the plugin."
+msgstr ""
+
+#: admin/views/dashboard.php:9
+msgid "Go to Settings"
+msgstr ""
+
+#: admin/views/dashboard.php:18
+msgid "Store Information"
+msgstr ""
+
+#: admin/views/dashboard.php:22
+msgid "Store Name"
+msgstr ""
+
+#: admin/views/dashboard.php:26
+msgid "Type"
+msgstr ""
+
+#: admin/views/dashboard.php:30
+msgid "Created"
+msgstr ""
+
+#: admin/views/dashboard.php:34
+msgid "Website"
+msgstr ""
+
+#: admin/views/dashboard.php:45
+msgid "Unable to retrieve store information. Please check your API key."
+msgstr ""
+
+#: admin/views/dashboard.php:53
+msgid "Quick Actions"
+msgstr ""
+
+#: admin/views/dashboard.php:56
+msgid "Manage Products"
+msgstr ""
+
+#: admin/views/dashboard.php:59
+msgid "Manage Orders"
+msgstr ""
+
+#: admin/views/dashboard.php:62
+msgid "Sync Products Now"
+msgstr ""
+
+#: admin/views/dashboard.php:69
+msgid "Synchronization Status"
+msgstr ""
+
+#: admin/views/dashboard.php:75
+msgid "Last sync: %s"
+msgstr ""
+
+#: admin/views/dashboard.php:81
+msgid "No synchronization has been performed yet."
+msgstr ""
+
+#: admin/views/dashboard.php:88
+msgid "Documentation"
+msgstr ""
+
+#: admin/views/dashboard.php:89
+msgid "Check out the Printful API documentation for more information:"
+msgstr ""
+
+#: admin/views/dashboard.php:91
+msgid "View Documentation"
+msgstr ""
+
+#: admin/views/order-meta-box.php:27
+msgid "This order contains Printful products but has not been sent to Printful."
+msgstr ""
+
+#: admin/views/order-meta-box.php:30
+msgid "Send to Printful"
+msgstr ""
+
+#: admin/views/order-meta-box.php:35
+msgid "This order does not contain any Printful products."
+msgstr ""
+
+#: admin/views/order-meta-box.php:57
+msgid "Printful Order ID:"
+msgstr ""
+
+#: admin/views/order-meta-box.php:58
+msgid "Status:"
+msgstr ""
+
+#: admin/views/order-meta-box.php:61
+msgid "Tracking:"
+msgstr ""
+
+#: admin/views/order-meta-box.php:74
+msgid "View on Printful"
+msgstr ""
+
+#: admin/views/order-meta-box.php:78
+msgid "Cancel Order"
+msgstr ""
+
+#: admin/views/order-meta-box.php:83
+msgid "Refresh Status"
+msgstr ""
+
+#: admin/views/orders.php:1
+msgid "Printful Orders"
+msgstr ""
+
+#: admin/views/orders.php:7
+msgid "Please set up your Printful API key in the Settings tab to start using the plugin."
+msgstr ""
+
+#: admin/views/orders.php:16
+msgid "Recent Printful Orders"
+msgstr ""
+
+#: admin/views/orders.php:18
+msgid "No orders found in your Printful store. When you process orders with Printful products, they will appear here."
+msgstr ""
+
+#: admin/views/orders.php:24
+msgid "ID"
+msgstr ""
+
+#: admin/views/orders.php:25
+msgid "External ID"
+msgstr ""
+
+#: admin/views/orders.php:26
+msgid "Status"
+msgstr ""
+
+#: admin/views/orders.php:27
+msgid "Date"
+msgstr ""
+
+#: admin/views/orders.php:28
+msgid "Total"
+msgstr ""
+
+#: admin/views/orders.php:29
+msgid "Actions"
+msgstr ""
+
+#: admin/views/orders.php:37
+msgid "Draft"
+msgstr ""
+
+#: admin/views/orders.php:38
+msgid "Pending"
+msgstr ""
+
+#: admin/views/orders.php:39
+msgid "In Process"
+msgstr ""
+
+#: admin/views/orders.php:40
+msgid "On Hold"
+msgstr ""
+
+#: admin/views/orders.php:41
+msgid "Failed"
+msgstr ""
+
+#: admin/views/orders.php:42
+msgid "Canceled"
+msgstr ""
+
+#: admin/views/orders.php:43
+msgid "Shipped"
+msgstr ""
+
+#: admin/views/orders.php:44
+msgid "Fulfilled"
+msgstr ""
+
+#: admin/views/orders.php:89
+msgid "View on Printful"
+msgstr ""
+
+#: admin/views/orders.php:93
+msgid "Cancel"
+msgstr ""
+
+#: admin/views/products.php:1
+msgid "Printful Products"
+msgstr ""
+
+#: admin/views/products.php:7
+msgid "Please set up your Printful API key in the Settings tab to start using the plugin."
+msgstr ""
+
+#: admin/views/products.php:16
+msgid "Sync All Products"
+msgstr ""
+
+#: admin/views/products.php:19
+msgid "Force Sync (Update All)"
+msgstr ""
+
+#: admin/views/products.php:25
+msgid "Sync Results"
+msgstr ""
+
+#: admin/views/products.php:31
+msgid "Printful Products"
+msgstr ""
+
+#: admin/views/products.php:33
+msgid "No products found in your Printful store. You can create products in Printful and sync them to your WooCommerce store."
+msgstr ""
+
+#: admin/views/products.php:35
+msgid "Go to Printful Products"
+msgstr ""
+
+#: admin/views/products.php:42
+msgid "ID"
+msgstr ""
+
+#: admin/views/products.php:43
+msgid "Image"
+msgstr ""
+
+#: admin/views/products.php:44
+msgid "Name"
+msgstr ""
+
+#: admin/views/products.php:45
+msgid "Variants"
+msgstr ""
+
+#: admin/views/products.php:46
+msgid "Status"
+msgstr ""
+
+#: admin/views/products.php:47
+msgid "WooCommerce Product"
+msgstr ""
+
+#: admin/views/products.php:70
+msgid "Not synced"
+msgstr ""
+
+#: admin/views/settings.php:1
+msgid "Printful Settings"
+msgstr ""
+
+#: admin/views/settings.php:5
+msgid "General"
+msgstr ""
+
+#: admin/views/settings.php:6
+msgid "Products"
+msgstr ""
+
+#: admin/views/settings.php:7
+msgid "Orders"
+msgstr ""
+
+#: admin/views/settings.php:8
+msgid "Shipping"
+msgstr ""
+
+#: admin/views/settings.php:17
+msgid "API Key"
+msgstr ""
+
+#: admin/views/settings.php:22
+msgid "Enter your Printful API key. You can find it in your Printful dashboard under Settings > API."
+msgstr ""
+
+#: admin/views/settings.php:23
+msgid "Get your API key"
+msgstr ""
+
+#: admin/views/settings.php:26
+msgid "Test Connection"
+msgstr ""
+
+#: admin/views/settings.php:34
+msgid "Store ID"
+msgstr ""
+
+#: admin/views/settings.php:39
+msgid "Enter your Printful Store ID. This is optional and will be auto-detected from your API key."
+msgstr ""
+
+#: admin/views/settings.php:53
+msgid "Sync to Printful"
+msgstr ""
+
+#: admin/views/settings.php:58
+#: admin/views/settings.php:82
+#: admin/views/settings.php:106
+msgid "No"
+msgstr ""
+
+#: admin/views/settings.php:61
+#: admin/views/settings.php:85
+#: admin/views/settings.php:109
+msgid "Yes"
+msgstr ""
+
+#: admin/views/settings.php:65
+msgid "When enabled, changes to product information in WooCommerce will be synced back to Printful."
+msgstr ""
+
+#: admin/views/settings.php:72
+msgid "Delete Products"
+msgstr ""
+
+#: admin/views/settings.php:89
+msgid "When enabled, products deleted from Printful will also be deleted from WooCommerce during synchronization."
+msgstr ""
+
+#: admin/views/settings.php:96
+msgid "Delete from Printful"
+msgstr ""
+
+#: admin/views/settings.php:113
+msgid "When enabled, products deleted from WooCommerce will also be deleted from Printful."
+msgstr ""
+
+#: admin/views/settings.php:131
+msgid "Auto Fulfill"
+msgstr ""
+
+#: admin/views/settings.php:136
+msgid "Yes"
+msgstr ""
+
+#: admin/views/settings.php:139
+msgid "No"
+msgstr ""
+
+#: admin/views/settings.php:143
+msgid "When enabled, orders containing Printful products will be automatically sent to Printful for fulfillment."
+msgstr ""
+
+#: admin/views/settings.php:150
+msgid "Shipped Status"
+msgstr ""
+
+#: admin/views/settings.php:155
+msgid "Mark as Completed"
+msgstr ""
+
+#: admin/views/settings.php:158
+#: admin/views/settings.php:184
+#: admin/views/settings.php:203
+msgid "Do Not Change Status"
+msgstr ""
+
+#: admin/views/settings.php:162
+msgid "Action to take when an order is shipped by Printful."
+msgstr ""
+
+#: admin/views/settings.php:169
+msgid "Failed Order Status"
+msgstr ""
+
+#: admin/views/settings.php:174
+msgid "On Hold"
+msgstr ""
+
+#: admin/views/settings.php:177
+msgid "Failed"
+msgstr ""
+
+#: admin/views/settings.php:188
+msgid "Action to take when Printful fails to process an order."
+msgstr ""
+
+#: admin/views/settings.php:195
+msgid "On Hold Status"
+msgstr ""
+
+#: admin/views/settings.php:200
+msgid "On Hold"
+msgstr ""
+
+#: admin/views/settings.php:207
+msgid "Action to take when Printful puts an order on hold."
+msgstr ""
+
+#: admin/views/settings.php:214
+msgid "Refund Action"
+msgstr ""
+
+#: admin/views/settings.php:219
+msgid "Cancel Printful Order"
+msgstr ""
+
+#: admin/views/settings.php:222
+msgid "Do Nothing"
+msgstr ""
+
+#: admin/views/settings.php:226
+msgid "Action to take when an order is refunded in WooCommerce."
+msgstr ""
+
+#: admin/views/settings.php:238
+msgid "Printful shipping is controlled through the WooCommerce shipping zones. Please configure your shipping zones in WooCommerce and add the Printful shipping method to use Printful shipping rates."
+msgstr ""
+
+#: admin/views/settings.php:240
+msgid "Configure Shipping Zones"
+msgstr ""
+
+#: admin/views/settings.php:275
+msgid "Please enter an API key"
+msgstr ""
+
+#: admin/views/settings.php:279
+msgid "Testing connection..."
+msgstr ""
+
+#: admin/views/settings.php:303
+msgid "Connection failed. Please try again."
+msgstr ""
+
+#: includes/class-printful-api.php:61
+msgid "API key not set"
+msgstr ""
+
+#: includes/class-printful-api.php:91
+msgid "Unknown error"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:119
+msgid "Error creating Printful order: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:130
+msgid "Printful order created. Order ID: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:156
+msgid "Error cancelling Printful order: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:159
+msgid "Printful order cancelled"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:181
+msgid "Printful order cancelled due to refund"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:251
+msgid "Order fulfilled and shipped by Printful"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:254
+msgid "Order shipped by Printful. Tracking number: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:255
+msgid "Not provided"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:281
+msgid "Printful has received the order and will process it"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:309
+msgid "Unknown reason"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:312
+msgid "Printful order failed: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:334
+msgid "Printful order has been canceled"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:362
+msgid "Printful order put on hold: %s"
+msgstr ""
+
+#: includes/class-printful-order-sync.php:384
+msgid "Printful order removed from hold status"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:152
+msgid "Error updating product %s: %s"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:171
+msgid "Error creating product %s: %s"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:246
+msgid "Invalid response from Printful API"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:283
+msgid "Invalid product data from Printful API"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:384
+msgid "WooCommerce product not found"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:399
+msgid "Invalid product data from Printful API"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:926
+msgid "Security check failed"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:931
+msgid "You do not have permission to do this"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:945
+msgid "Sync completed with errors"
+msgstr ""
+
+#: includes/class-printful-product-sync.php:949
+msgid "Sync completed successfully"
+msgstr ""
+
+#: includes/class-printful-shipping.php:120
+msgid "Invalid response from Printful API"
+msgstr ""
+
+#: includes/class-printful-shipping.php:134
+msgid "Security check failed"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:18
+msgid "Printful Shipping"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:19
+msgid "Provides shipping rates from Printful."
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:47
+msgid "Title"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:49
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:54
+msgid "Tax Status"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:56
+msgid "Set whether or not the shipping cost is taxable."
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:59
+msgid "Taxable"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:60
+msgid "Not taxable"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:65
+msgid "Fallback Method"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:67
+msgid "If Printful cannot calculate rates, use this method."
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:70
+msgid "Flat Rate"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:71
+msgid "Free Shipping"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:72
+msgid "Disable Shipping Method"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:77
+msgid "Fallback Cost"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:79
+msgid "If using flat rate as fallback, this will be the cost."
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:187
+msgid "Standard Shipping"
+msgstr ""
+
+#: includes/class-printful-shipping-method.php:195
+msgid "Free Shipping"
+msgstr "" 

@@ -1,0 +1,10 @@
+<?php /* Debug section for tables */ ?>
+<div class="printful-table-debug" style="margin: 20px 0; padding: 10px; background: #f8f8f8; border: 1px solid #ddd; display: <?php 
+if (isset($_GET['debug']) || (defined('WP_DEBUG') && WP_DEBUG)) { 
+    echo 'block'; 
+} else { 
+    echo 'none'; 
+} 
+?>">
+    <h3>Table Debug Information</h3>
+</div> 
