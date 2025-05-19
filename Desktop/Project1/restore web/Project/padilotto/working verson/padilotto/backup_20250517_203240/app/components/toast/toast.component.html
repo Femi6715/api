@@ -1,0 +1,8 @@
+<div *ngIf="showToast" class="toast-container" [@toastAnimation]="animationState">
+  <div class="toast" [ngClass]="type">
+    <div class="toast-content">
+      <div class="message">{{ message }}</div>
+    </div>
+    <button class="close-btn" (click)="hide()">×</button>
+  </div>
+</div> 

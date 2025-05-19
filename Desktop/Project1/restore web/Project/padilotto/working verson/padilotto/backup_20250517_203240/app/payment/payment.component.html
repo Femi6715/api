@@ -1,0 +1,41 @@
+<div class="container" style="margin-top: 200px; float: center;">
+    <ngx-loading [show]="loading"></ngx-loading>
+    <div class="row" style="text-align: center">
+        <section class="section-features">
+            <div class="body-row">
+                <!-- <div class="col-lg-12 col-md-12 col-sm-12"> -->
+                <angular4-paystack [key]="'pk_live_ea985dc0232ca4ef5c16730e2f0f6aa7465bdd32'" [channels]="['card', 'bank','ussd', 'qr']" [email]="this.email" [amount]="depositAmount" [ref]="reference" [class]="'btn btn-primary'" (callback)="depo()">
+                    <h4>Pay With Paystack</h4>
+                </angular4-paystack>
+                <!-- </div> -->
+
+            </div>
+            <br>
+            <br>
+        
+            <div class="col-lg-6 col-sm-12 col-md-12" style="margin-top: 10px;">
+                <ul class="nav navbar-nav" id="footer_wrapper">
+                    <li class="dropdown" id="htp_dropdown">
+                    <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span>Pay with Bank Transfer<span class="glyphicon glyphicon-chevron-down" style="float: right; margin-top: 1%"></span></a>
+                    <ul id="htp_dropdown_list" class="dropdown-menu">
+                        <h4 style="text-align:center">Bank Name: Zenith Bank</h4>
+                        <h5 style="text-align:center">Account No: <b>1016248299</b></h5>
+                        <h5 style="text-align:center">Account Name: Simple Touch Applications Limited </h5>
+            
+                        <br>
+                        <h5 style="text-align:center"><b>Note: Use your Username as the Reference for the transfer.</b></h5>
+            
+                        <br>
+                        <h5 style="text-align:center">After a successful transfer, send us a message on WhatsApp <a href="https://wa.me/2347054065523" style="color: black">(07054065523)</a> and your account will be credited instantly!</h5>
+                          <br>  
+                        
+                        <br>
+                        <a href="#"><button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:black; margin-top: 5%; margin-left: 40%;;">Close</button></a>
+                      </ul>
+                    </li>
+                    </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<app-home-footer></app-home-footer>

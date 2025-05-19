@@ -1,0 +1,36 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  border: none;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-primary {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.fas {
+  margin-bottom: 1rem;
+} 

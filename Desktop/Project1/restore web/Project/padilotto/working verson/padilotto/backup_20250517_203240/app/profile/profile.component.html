@@ -1,0 +1,109 @@
+<div class="container" *ngIf="user" style="margin-top: 150px; margin-bottom: 50px;">
+    <div class="row">
+      <section class="section-features">
+        <div class="body-row" style="color: black;">
+            <div class="col-lg-12 col-md-12 col-sm-12"> 
+              <ngx-loading [show]="loading"></ngx-loading>
+              <div class="card">
+                    <div class="card-body">
+                      <flash-messages></flash-messages>
+                            <h4>UPDATE YOUR PROFILE.</h4>
+                      <div class="alert alert-info">
+                        <small>Note: First Name, Surname, and Username cannot be changed.</small>
+                      </div>
+                      <form [formGroup]="profileForm" novalidate (ngSubmit)="updateUser()">
+                          <!-- <input type="hidden" class="form-control" formControlName="_id" name="_id" /> -->
+                          <!-- <input type="hidden" class="form-control" formControlName="__v" name="__v" /> -->
+                          <div for="firstname" class="form-group">
+                              <label class="col-md-4">First Name </label>
+                              <input type="text" minlength="3" class="form-control" formControlName="firstname" name="firstname" readonly style="background-color: #f5f5f5;" />
+                            </div>
+                          <div for="surname" class="form-group">
+                          <label class="col-md-4">Surname</label>
+                          <input type="text" minlength="3" class="form-control" formControlName="surname" name="surname" readonly style="background-color: #f5f5f5;" />
+                        </div>
+                        <!-- <div class="form-group" for="lastname">
+                            <label class="col-md-4">Last Name </label>
+                            <input type="text" minlength="3" class="form-control" formControlName="lastname" name="lastname" />
+                          </div> -->
+                          <div for="state" class="form-group">
+                              <label class="col-md-4">State Of Residence</label>
+                              <select name="state" class="form-control" formControlName="state" name="state">
+                                  <option value="" selected="selected" disabled>- Select -</option>
+                                  <option value="Abuja FCT">Abuja FCT</option>
+                                  <option value="Abia">Abia</option>
+                                  <option value="Adamawa">Adamawa</option>
+                                  <option value="Akwa Ibom">Akwa Ibom</option>
+                                  <option value="Anambra">Anambra</option>
+                                  <option value="Bauchi">Bauchi</option>
+                                  <option value="Bayelsa">Bayelsa</option>
+                                  <option value="Benue">Benue</option>
+                                  <option value="Borno">Borno</option>
+                                  <option value="Cross River">Cross River</option>
+                                  <option value="Delta">Delta</option>
+                                  <option value="Ebonyi">Ebonyi</option>
+                                  <option value="Edo">Edo</option>
+                                  <option value="Ekiti">Ekiti</option>
+                                  <option value="Enugu">Enugu</option>
+                                  <option value="Gombe">Gombe</option>
+                                  <option value="Imo">Imo</option>
+                                  <option value="Jigawa">Jigawa</option>
+                                  <option value="Kaduna">Kaduna</option>
+                                  <option value="Kano">Kano</option>
+                                  <option value="Katsina">Katsina</option>
+                                  <option value="Kebbi">Kebbi</option>
+                                  <option value="Kogi">Kogi</option>
+                                  <option value="Kwara">Kwara</option>
+                                  <option value="Lagos">Lagos</option>
+                                  <option value="Nassarawa">Nassarawa</option>
+                                  <option value="Niger">Niger</option>
+                                  <option value="Ogun">Ogun</option>
+                                  <option value="Ondo">Ondo</option>
+                                  <option value="Osun">Osun</option>
+                                  <option value="Oyo">Oyo</option>
+                                  <option value="Plateau">Plateau</option>
+                                  <option value="Rivers">Rivers</option>
+                                  <option value="Sokoto">Sokoto</option>
+                                  <option value="Taraba">Taraba</option>
+                                  <option value="Yobe">Yobe</option>
+                                  <option value="Zamfara">Zamfara</option>
+                                </select>
+                            </div>
+                            <div for="email" class="form-group">
+                                <label class="col-md-4">Email Address </label>
+                                <input type="text" class="form-control" formControlName="email" name="email" />
+                              </div>
+                        <div for="mobile_no" class="form-group">
+                          <label class="col-md-4">Mobile Number </label>
+                          <input type="tel" minlength="11" maxlength="11" class="form-control" formControlName="mobile_no" name="mobile_no" />
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4">Username </label>
+                            <input type="text" minlength="3" class="form-control" formControlName="username" name="username" readonly style="background-color: #f5f5f5;" />
+                          </div>
+                          <div for="old_password" class="form-group">
+                              <label class="col-md-4">Old Password </label>
+                              <input type="password" minlength="6" class="form-control" formControlName="old_password" name="old_password" />
+                            </div>
+                          <div for="password" class="form-group">
+                              <label class="col-md-4">New Password </label>
+                              <input type="password" minlength="6" class="form-control" formControlName="password" name="password" />
+                            </div>
+                            <div for="password" class="form-group">
+                              <label class="col-md-4">Confirm New Password </label>
+                              <input type="password" minlength="6" class="form-control" formControlName="confirm_password" name="confirm_password" />
+                            </div>
+                            <input type="hidden" class="form-control" formControlName="main_balance" name="main_balance" />
+                            <input type="hidden" class="form-control" formControlName="bonus" name="bonus" />
+                        <div class="form-group">
+                          <button class="btn btn-primary" style="background-color: black;">Save Changes</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+         </div>      
+         <app-home-footer></app-home-footer>

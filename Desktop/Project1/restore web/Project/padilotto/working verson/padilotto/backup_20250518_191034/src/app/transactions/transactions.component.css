@@ -1,0 +1,12 @@
+.transaction-container{
+    padding: 2% 2%;
+    border-left: 3px solid green;
+    border-right: 1px solid gray;
+    border-bottom: 1px dashed gray;   
+    margin-top: 5%;
+    border-top-left-radius: 5px;
+    background-color: #f5f6fa;
+    /* box-shadow: 0 0 7px  #006b96;
+    -webkit-box-shadow: 0 0 7px  #006b96; */
+
+}

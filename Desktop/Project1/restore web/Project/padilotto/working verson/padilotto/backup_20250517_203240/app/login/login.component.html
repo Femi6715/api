@@ -1,0 +1,114 @@
+<!-- Login Page Container -->
+<div class="login-container">
+  <!-- Login Form -->
+  <div class="desktop-one">
+    <ngx-loading [show]="loading"></ngx-loading>
+    
+    <!-- Login Form -->
+    <div id="login-form" *ngIf="!forgotPwd">
+      <h3>Login</h3>
+      
+      <flash-messages></flash-messages>
+      
+      <!-- Status Message -->
+      <div *ngIf="statusMessage" [ngClass]="{
+        'status-message': true,
+        'status-info': statusType === 'info',
+        'status-success': statusType === 'success',
+        'status-error': statusType === 'error'
+      }">
+        {{ statusMessage }}
+      </div>
+
+      <form class="form-horizontal" [formGroup]="angForm" novalidate (ngSubmit)="loginSubmit()">
+        <div class="form-group">
+          <label for="username">Username / Phone number:</label>
+          <div class="input-group">
+            <input type="text" id="username" class="form-control" formControlName="username" 
+                   placeholder="Enter username or phone number" autocomplete="username">
+          </div>
+          <div *ngIf="angForm.controls['username'].invalid && (angForm.controls['username'].dirty || angForm.controls['username'].touched)" class="error-message">
+            <div *ngIf="angForm.controls['username'].errors.required">
+              Username or phone number is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <div class="input-group">
+            <input type="{{hidePassword ? 'password' : 'text'}}" id="password" class="form-control" 
+                   formControlName="password" placeholder="Enter your password" autocomplete="current-password">
+          </div>
+          <div *ngIf="angForm.controls['password'].invalid && (angForm.controls['password'].dirty || angForm.controls['password'].touched)" class="error-message">
+            <div *ngIf="angForm.controls['password'].errors.required">
+              Password is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-container">
+            <input type="checkbox" id="showPassword" (change)="hidePassword = !hidePassword">
+            <label for="showPassword" class="checkbox-label">Show Password</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">
+            SIGN IN
+          </button>
+          <div class="form-links">
+            <a (click)="forgotPassword()">Forgot Username / Password?</a>
+            <p>Don't have an account? <a [routerLink]="['/register']">Sign up</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Password Reset Form -->
+    <div id="reset-form" *ngIf="forgotPwd">
+      <h3>Reset Password</h3>
+      
+      <flash-messages></flash-messages>
+      
+      <!-- Status Message -->
+      <div *ngIf="statusMessage" [ngClass]="{
+        'status-message': true,
+        'status-info': statusType === 'info',
+        'status-success': statusType === 'success',
+        'status-error': statusType === 'error'
+      }">
+        {{ statusMessage }}
+      </div>
+      
+      <form class="form-horizontal" [formGroup]="resetFormField" novalidate (ngSubmit)="resetSubmit()">
+        <div class="form-group">
+          <label for="reset-username">Email Address:</label>
+          <div class="input-group">
+            <input type="text" id="reset-username" class="form-control" formControlName="username" 
+                  placeholder="Enter email" autocomplete="email">
+          </div>
+          <div *ngIf="resetFormField.controls['username'].invalid && (resetFormField.controls['username'].dirty || resetFormField.controls['username'].touched)" class="error-message">
+            <div *ngIf="resetFormField.controls['username'].errors.required">
+              Email is required
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="resetFormField.pristine || resetFormField.invalid">
+            Reset Password
+          </button>
+          <div class="form-links">
+            <a (click)="forgotPwd = false">Back to Login</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-home-footer></app-home-footer>
+<!-- Mobile Login Form - Hidden in favor of responsive design -->
+<!-- We're removing the duplicate mobile form and making our main form responsive -->
+<!-- This prevents code duplication and ensures consistent user experience -->

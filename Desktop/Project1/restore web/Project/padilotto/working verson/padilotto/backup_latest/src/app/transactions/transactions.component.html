@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 160px;">
+  <div class="row">
+    <section class="section-features">
+      <div class="body-row" *ngIf="transactions">
+        <div *ngFor="let eachTransaction of transactions | paginate: { itemsPerPage: 10, currentPage: p }">
+          <ul [ngClass]="{'green': eachTransaction.transaction_type == 'deposit', 'red': eachTransaction.transaction_type == 'withdrawal', 'red-stake': eachTransaction.transaction_type == 'ticket_purchase' || eachTransaction.transaction_type == 'winning'}" >
+          <p style="font-weight:bold">
+            <span *ngIf="eachTransaction.transaction_type == 'deposit'" class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+            <span *ngIf="eachTransaction.transaction_type == 'withdrawal'" class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+            <span *ngIf="eachTransaction.transaction_type == 'ticket_purchase'" class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+            <span *ngIf="eachTransaction.transaction_type == 'winning'" class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>
+            &nbsp;&nbsp;&nbsp;{{eachTransaction.transaction_type == 'ticket_purchase' ? 'Purchase' : eachTransaction.transaction_type}}
+        </p>
+          <!-- <p style="padding-left: 6%">Type: {{eachTransaction.transaction_type}}</p> -->
+          <p style="padding-left: 6%">Amount: {{eachTransaction.amount_involved}}</p>
+          <p style="padding-left: 6%">Balance: {{eachTransaction.acct_balance}}</p>
+          <p style="padding-left: 6%">Date: {{eachTransaction.time_stamp | date:'medium'}}</p>
+            </ul>
+        </div>
+        <pagination-controls (pageChange)="p = $event;scroll()"></pagination-controls>
+      </div>
+    </section>
+  </div>
+</div>
+<app-home-footer></app-home-footer>
+
+

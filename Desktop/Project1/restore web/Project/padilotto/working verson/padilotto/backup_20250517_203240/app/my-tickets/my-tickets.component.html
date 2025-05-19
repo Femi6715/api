@@ -1,0 +1,38 @@
+<div class="container" *ngIf="my_tickets" style="margin-top: 160px;">
+    <div class="row">
+        <section class="section-features">
+            <ngx-loading [show]="loading"></ngx-loading>
+            <div class="body-row">
+                <form class="filter-div">
+                    <div class="input-filter">
+                        <label style="color: black">Filter tickets by ID:</label>
+                        <input type="text" class="form-control" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                    <div class="date-filter">
+                        <label style="color: black">Filter tickets by Date:</label>
+                        <!-- <ejs-datepicker id='datepicker' placeholder='Search by date' [value]='dateValue'></ejs-datepicker> -->
+
+                        <input type="date" [(ngModel)]="term" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </form>
+                <hr>
+                <div class="col-lg-12 col-md-12 col-sm-12" *ngFor="let each_ticket of my_tickets | filter: term | paginate: { itemsPerPage: 10, currentPage: p }">
+                    <ul style="font-weight: 500;" [ngClass]="{'green': each_ticket.ticket_status == 'won', 'red': each_ticket.ticket_status == 'lost', 'orange': each_ticket.ticket_status == 'pending'}">
+                        <li>TICKET ID: {{each_ticket.ticket_id |filter}}</li>
+                        <li>GAME ID: {{each_ticket.game_id}}</li>
+                        <li>BET TIME: {{each_ticket.created_at ? (each_ticket.created_at | date : 'dd-MM-yyyy HH:mm:ss') : (each_ticket.time_stamp | date : 'dd-MM-yyyy HH:mm:ss')}}</li>
+                        <li>STAKE: &#8358; {{each_ticket.stake_amt}}</li>
+                        <li>POTENTIAL WINNING: {{each_ticket.potential_winning | currency:'&#8358;'}}</li>
+                        <li>DRAW DATE: {{each_ticket.draw_date}}</li>
+                        <li>DRAW TIME: {{each_ticket.draw_time}}</li>
+                        <li>TICKET STATUS:<span [ngClass]="{'green-status': each_ticket.ticket_status == 'won', 'red-status': each_ticket.ticket_status == 'lost', 'orange-status': each_ticket.ticket_status == 'pending'}"> {{each_ticket.ticket_status}}</span></li>
+                        <!-- <button class="btn btn-primary" title="print"><span class="glyphicon glyphicon-print"></span></button> -->
+                    </ul>
+                </div>
+            <pagination-controls (pageChange)="p = $event;scroll()"></pagination-controls>
+
+            </div>
+        </section>
+    </div>
+</div>
+<app-home-footer></app-home-footer>

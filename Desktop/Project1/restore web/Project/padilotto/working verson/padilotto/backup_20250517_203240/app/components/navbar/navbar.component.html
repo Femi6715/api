@@ -1,0 +1,133 @@
+
+  <header class="header-section fixed-top mt-0" style="border-bottom: 2px solid tomato;">
+
+    <div  [hidden]='hideTop' [@openClose]="isSubOpen ? 'open' : 'closed'" class="header-top" style="background-color: white;">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <div class="header-top-left d-flex ">
+                        <div class="support-part">
+                          <a style="color: #0541e8" href="http://blog.padilotto.ng"><i class="fa fa-globe" style="background-color: #0541e8"></i>Blog</a>
+                      </div>
+                        <div class="support-part">
+                          
+                          <a href="tel:+2349052531985"><i class="fa fa-phone" style="background-color: #0541e8"></i>Call</a>
+                      </div>
+                        <div class="email-part">
+                            <a style="color: #0541e8" href="mailto:support@padilotto.ng"><i class="fa fa-envelope" class="fa fa-envelope" style="background-color: #0541e8"></i>support@padilotto.ng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="header-top-right">
+                        <div [routerLink]="['my-tickets']" class="header-cart-count">
+                            <a href="https://wa.me/2347054065523"><i class="fa fa-whatsapp" style="background-color: #33cc66"></i></a>
+                        </div>
+                        <div *ngIf="loggedInStatus" [routerLink]="['my-tickets']" class="header-cart-count">
+                            <span>My Ticket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom mt-0" style="background-color:  #0541e8; border-block-end-color: tomato; border-block-start-color: tomato">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl">
+          <a  [routerLink]="['/']" class="site-logo site-title" ><img src="assets/images/Large_160x55.jpg" alt="site-logo"></a>
+          <button [hidden]='!isSmallScreen' (click)="toggleCollapse()"  style="color: white;" class="navbar-toggler" type="button">
+              <span style="font-size: 1em;color:white" class="menu-toggle is-active mt-2" [class.is-active]='showMenu'></span>
+            <!--   <span [hidden]="collapse ==='open'" style="font-weight: 200 !important" class="fa fa-bars "></span>
+              <span [hidden]="collapse ==='closed'" style="font-weight: 200" class="fa fa-times fa-lg"></span> -->
+          </button>
+          <div class="navbar-collapse "  [@collapse]="collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav main-menu ml-auto">
+                <ng-container *ngIf='isSmallScreen'>
+                    <li *ngIf="loggedInStatus" class="menu-link menu_has_children">
+                      <a *ngIf="user" class="user-dropdown">
+                        <i class="fa fa-user"></i>
+                        {{user.username | titlecase}}</a>
+                      <ul class="sub-menu">
+
+                        <li class="pl-2 uid"> <strong>ID:</strong> {{ user_id }} </li>
+                        <li class="pl-2 uid"> <strong>Main:</strong> {{ user_main_balance | currency:"&#8358;" }} </li>
+                        <li class="pl-2 uid"> <strong>Bonus:</strong> {{ user_bonus | currency:"&#8358;" }} </li>
+                        <li><a [routerLink]="['profile']">Profile</a></li>
+                        <li><a [routerLink]="['my-tickets']">My Tickets</a></li>
+                        <li><a [routerLink]="['deposit']">Deposit</a></li>
+                        <li><a  [routerLink]="['withdraw']">Withdraw</a></li>
+                        <li><a  [routerLink]="['transactions']">Transactions</a></li>
+                        <li class="logout"><a (click)="onLogoutClick()" [routerLink]="['/']">Log Out</a></li>
+                      </ul>
+                    </li>
+                  </ng-container>
+              <li><a class="menu-link" [routerLink]="['/']">HOME</a>
+              </li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}">
+                <a class="menu-link" [routerLink]="['/play']" [queryParams]="{id: nearestDrawId}">LIVE DRAWS</a>
+              </li>
+              <li>
+                <a class="menu-link" [routerLink]="['winning-tickets']">WINNERS</a>
+              </li>
+              <li>
+                <a [routerLink]="['/bonuses']" class="menu-link">OFFERS</a>
+              </li>
+              <!-- <ng-container *ngIf='!isSmallScreen'>
+                <li *ngIf="loggedInStatus" class="menu-link menu_has_children">
+                  <a *ngIf="user" class="user-dropdown">
+                    <i class="fa fa-user"></i>
+                    {{user.username | titlecase}}</a>
+                  <ul class="sub-menu">
+
+                    <li class="pl-2 uid"> <strong>ID:</strong> {{ user_id }} </li>
+                    <li class="pl-2 uid"> <strong>Main:</strong> {{ user_main_balance | currency:"&#8358;" }} </li>
+                    <li class="pl-2 uid"> <strong>Bonus:</strong> {{ user_bonus | currency:"&#8358;" }} </li>
+
+                    <li><a [routerLink]="['profile']">Profile</a></li>
+                    <li><a [routerLink]="['my-tickets']">My Tickets</a></li>
+                    <li><a [routerLink]="['deposit']">Deposit</a></li>
+                    <li><a  [routerLink]="['withdraw']">Withdraw</a></li>
+                    <li><a  [routerLink]="['transactions']">Transactions</a></li>
+                    <li class="logout"><a (click)="onLogoutClick()" [routerLink]="['/']">Log Out</a></li>
+                  </ul>
+                </li>
+              </ng-container> -->
+
+              <!-- My Account Menu -->
+              <li *ngIf="loggedInStatus" class="menu_has_children">
+                <a class="menu-link">
+                  <i class="fa fa-user"></i> My Account
+                </a>
+                <ul class="sub-menu">
+                  <li class="account-info">
+                    <div class="user-id"><strong>ID:</strong> {{ user_id }}</div>
+                    <div class="user-balance"><strong>Main:</strong> {{ user_main_balance | currency:"&#8358;" }}</div>
+                    <div class="user-bonus"><strong>Bonus:</strong> {{ user_bonus | currency:"&#8358;" }}</div>
+                  </li>
+                  <li><a [routerLink]="['/profile']"><i class="fa fa-user-circle"></i> Profile</a></li>
+                  <li><a [routerLink]="['/my-tickets']"><i class="fa fa-ticket"></i> My Tickets</a></li>
+                  <li><a [routerLink]="['/deposit']"><i class="fa fa-money"></i> Deposit</a></li>
+                  <li><a [routerLink]="['/withdraw']"><i class="fa fa-bank"></i> Withdraw</a></li>
+                  <li><a [routerLink]="['/transactions']"><i class="fa fa-exchange"></i> Transactions</a></li>
+                  <li class="logout"><a (click)="onLogoutClick()"><i class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <div  *ngIf="!loggedInStatus"  class="header-join-part">
+              <button type="button" class="cmn-btn"  [routerLink]="['login']"
+             style="background-color: #ff8c00; border: 1px solid #ff8c00"><b>LOGIN</b></button>
+            </div>
+            <div  *ngIf="!loggedInStatus"  class="header-join-part">
+              <button type="button" class="cmn-btn" data-toggle="modal" data-target="#exampleModal" href='' [routerLink]="['register']" style="background-color: white"> <b><p style="color: #0541e8" class="p-0 m-0">REGISTER</p></b></button>
+            </div>
+          </div>
+
+        </nav>
+
+      </div>
+    </div><!-- header-bottom end -->
+  </header>
+
+
+

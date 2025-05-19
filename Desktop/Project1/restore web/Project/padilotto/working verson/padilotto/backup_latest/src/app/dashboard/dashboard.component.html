@@ -1,0 +1,58 @@
+<div class="dashboard-container">
+  <div class="welcome-section">
+    <h1>Welcome, {{user?.username | titlecase}}!</h1>
+    <div class="user-info">
+      <div class="info-card">
+        <h3>Main Balance</h3>
+        <p>{{user?.balance | currency:"&#8358;"}}</p>
+      </div>
+      <div class="info-card">
+        <h3>Bonus Balance</h3>
+        <p>{{user?.bonus | currency:"&#8358;"}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-actions">
+    <h2>Quick Actions</h2>
+    <div class="action-buttons">
+      <button class="action-btn" [routerLink]="['/play']">
+        <i class="fa fa-gamepad"></i>
+        Play Now
+      </button>
+      <button class="action-btn" [routerLink]="['/deposit']">
+        <i class="fa fa-money"></i>
+        Deposit
+      </button>
+      <button class="action-btn" [routerLink]="['/withdraw']">
+        <i class="fa fa-bank"></i>
+        Withdraw
+      </button>
+      <button class="action-btn" [routerLink]="['/my-tickets']">
+        <i class="fa fa-ticket"></i>
+        My Tickets
+      </button>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <h2>Your Statistics</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="fa fa-ticket"></i>
+        <h3>Total Tickets</h3>
+        <p>{{userStats.totalTickets}}</p>
+      </div>
+      <div class="stat-card">
+        <i class="fa fa-trophy"></i>
+        <h3>Total Winnings</h3>
+        <p>{{userStats.totalWinnings | currency:"&#8358;"}}</p>
+      </div>
+      <div class="stat-card">
+        <i class="fa fa-gamepad"></i>
+        <h3>Active Games</h3>
+        <p>{{userStats.activeGames}}</p>
+      </div>
+    </div>
+  </div>
+</div> 

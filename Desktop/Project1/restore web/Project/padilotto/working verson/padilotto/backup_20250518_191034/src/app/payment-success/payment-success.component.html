@@ -1,0 +1,35 @@
+<div class="container" style="padding: 50px 0;">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="card-body text-center" style="padding: 30px;">
+          <!-- Loading State -->
+          <div *ngIf="loading" class="mb-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p class="mt-3">Verifying payment...</p>
+          </div>
+          
+          <!-- Success State -->
+          <div *ngIf="!loading && success" class="mb-4">
+            <i class="fas fa-check-circle text-success" style="font-size: 48px;"></i>
+            <h3 class="mt-3">Payment Successful!</h3>
+            <p>Your payment has been processed successfully.</p>
+            <p>Transaction Reference: {{txRef}}</p>
+            <p *ngIf="amount">Amount: ₦{{amount}}</p>
+            <button class="btn btn-primary mt-3" routerLink="/dashboard">Return to Dashboard</button>
+          </div>
+          
+          <!-- Error State -->
+          <div *ngIf="!loading && !success" class="mb-4">
+            <i class="fas fa-times-circle text-danger" style="font-size: 48px;"></i>
+            <h3 class="mt-3">Payment Failed</h3>
+            <p>{{error}}</p>
+            <button class="btn btn-primary mt-3" routerLink="/payment">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

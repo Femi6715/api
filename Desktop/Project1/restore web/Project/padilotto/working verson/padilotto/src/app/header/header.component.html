@@ -1,0 +1,151 @@
+
+        <nav class="navbar navbar-default navbar-fixed-top" id="desktop-nav">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- <img src="../../assets/images/simple-lotto.png"> -->
+                <a class="navbar-brand" [routerLink]="['/']">
+                    <img id="main-logo" src="../../assets/images/newlogo.jpeg" style="width:130%;">
+                </a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--
+                    <ul class="nav navbar-nav">
+                   <li><a href="#">Inicio</a></li>
+                   <li><a href="#">Sobre</a></li>
+                   <li><a href="#">Serviços</a></li>
+                   <li><a href="#">Contato</a></li>
+                </ul>
+            -->
+
+                <ul class="nav navbar-nav navbar-right" style="color: #ffffff;">
+						 <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['/']"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Home</a></li>
+						 <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['/bonuses']"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Offers</a></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['winning-tickets']"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Winners</a></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a href="/play?id=5"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Live Draw</a></li>
+                        <li *ngIf="!loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a  [routerLink]="['register']"><span class="glyphicon  glyphicon-edit" aria-hidden="true"></span> Register</a></li>
+                        <li *ngIf="!loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a  [routerLink]="['login']"><span class="glyphicon  glyphicon-edit" aria-hidden="true"></span> Login</a></li>
+
+                        <li *ngIf="loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}" class="dropdown">
+                    <a *ngIf="user" href="#" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li *ngIf="user" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a  [routerLink]="['my-tickets']"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> My tickets</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['profile']" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['deposit']" ><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Deposit</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['withdraw']" ><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Withdraw</a></li>                       
+                      <li role="separator" class="divider"></li>
+                      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['transactions']"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Transactions</a></li>    
+                      <li role="separator" class="divider"></li>
+                      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a (click)="onLogoutClick()" [routerLink]="['/']"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out</a></li>
+                    </ul>  
+                    <div class="container-fluid">
+                        <div class="nav navbar-nav navbar-right">
+                          <li *ngIf="user" style="color:#ffffff;font-size: 10px;"> User ID: {{user_id | uppercase}}   Main: {{user_main_balance | currency:"&#8358;"}}   Bonus: {{user_bonus | currency:"&#8358;"}}</li><br>
+                          </div>
+                      </div>                
+                   </li>
+                  </ul>
+                  <!--
+                   <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Jack Bass<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.fgruber.ch/" target="_blank"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> User Settings</a></li>
+                      <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
+                   </ul>
+                  </li>
+                </ul>
+            -->
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>
+
+            <nav class="navbar navbar-default navbar-fixed-top" id="mobile-menu">
+                <ul>
+                    <a class="navbar-brand" [routerLink]="['/']">
+                      <img id="main-logo" src="../../assets/images/newlogo.jpeg" style="width:130%;">
+                  </a>
+                  <div>
+                    
+                      <div class="scroll-menu" id="scroll-menu" style="height: 57px">
+                          <a [routerLink]="['']"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><br> Home</a>
+                          <a [routerLink]="['/play']" [queryParams]="{id: 5}"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span><br> Live Draw</a>
+                          <a *ngIf="loggedInStatus" [routerLink]="['deposit']"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span><br> Deposit</a>
+                          <a [routerLink]="['winning-tickets']"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span><br> Winners</a>
+                          <a [routerLink]="['bonuses']"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><br> Offers</a>
+                          <a href="https://blog.padilotto.ng"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><br> Blog</a>
+                      </div>
+                      
+                  </div>
+                  <li  style="float: right; list-style: none; color: #ffffff;" *ngIf="!loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['login']"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Log in</a></li>
+                  <li  style="float: right; list-style: none; color: #ffffff;" *ngIf="!loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['register']"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Register</a></li>
+                
+                  <!-- <li style="margin-left: 75px; margin-top: 5px;" *ngIf="loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['deposit']" ><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Deposit</a></li> -->
+                  <ul class="nav navbar-nav navbar-right " >
+                      <li *ngIf="loggedInStatus" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}" class="dropdown">
+                      <a style="float:right;" *ngIf="user" href="#" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{user.username}}<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <div style="margin-top: 45px;">
+                            <li *ngIf="user" style="color:#ffffff;font-size: 15px; margin-left: 3%;"> Main: <span style="float: right; margin-right: 3%;"> {{user_main_balance | currency:"&#8358;"}}</span></li>
+                            <li *ngIf="user" style="color:#ffffff;font-size: 15px; margin-left: 3%;">  Bonus: <span style="float: right; margin-right: 3%;"> {{user_bonus | currency:"&#8358;"}}</span></li>
+                            <li *ngIf="user" style="color:#ffffff;font-size: 15px; margin-left: 3%;"> User ID: <span style="float: right; margin-right: 3%;"> {{user_id | uppercase}}</span></li>
+                        </div>
+
+                        <li role="separator" class="divider"></li>
+                        <li *ngIf="user" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a  [routerLink]="['my-tickets']"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> My tickets</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['profile']" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['deposit']" ><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span> Deposit</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['withdraw']" ><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Withdraw</a></li>                       
+                        <li role="separator" class="divider"></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a [routerLink]="['transactions']"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Transactions</a></li>    
+                        <li role="separator" class="divider"></li>
+                        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a (click)="onLogoutClick()" [routerLink]="['/']"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out</a></li>
+                      
+                      </ul>
+                    </ul>
+                </ul>
+                
+            </nav>
+
+
+          <!-- <header class="main-header"> -->
+                <!--
+        <nav>
+        <div class="body-row">
+            <img src="resources/img/logo-white.png" alt="sitename" class="logo">
+            <ul class="main-nav">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+
+        </div>
+    </nav>
+-->
+    <!-- <div class="hero-text-box"> -->
+        <!-- <h2>Participation in our on-going draw ends in:</h2> -->
+        <!-- Countdown with zero trigger: -->
+      <!-- <h1><countdown-timer (zeroTrigger)="afterCountDown()" [end]="newCount"></countdown-timer></h1> -->
+      <!-- <h1><countdown-timer [start]="something" [end]="anotherCount"></countdown-timer></h1> -->
+
+        <!-- <h2>To Win up to &#8358; 200,000</h2> -->
+        <!-- <a class="btn btn-full" [routerLink]="['categories']">Play now</a> -->
+    <!--
+        <a class="btn btn-ghost" href="#">Signup</a>
+    -->
+    <!-- </div> -->
+<!-- </header> -->

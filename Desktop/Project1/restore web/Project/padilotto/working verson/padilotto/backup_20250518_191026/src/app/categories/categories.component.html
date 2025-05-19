@@ -1,0 +1,165 @@
+<div class="container">
+    <div class="row">
+  <section class="section-features">
+      <div class="body-row" style="margin-top: 16%;">
+        <ngx-loading [show]="loading"></ngx-loading>
+            <flash-messages></flash-messages>
+
+
+<div class="desktop-one">
+    <div class="col-lg-4 col-sm-12 col-md-12">
+        <!-- <a [routerLink]="['categories']">   -->
+            <div class="mini-header1" style="background: navy;">
+                    <!-- <p>&#8358; {{each}} today<span style="float: right; margin-top: 1%">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </span>
+                    </p> -->
+                    <div class="sticker1"><h4 style="padding-right: auto;padding-top: 40%;"><b>Stake &#8358;25</b></h4></div>
+                    <!-- <div class="win-label"> -->
+                        <h3 class="win-label1">WIN <span style="color: red;">&#8358;25,000</span></h3>
+                        <small style="float: right; padding-right: 2%;color: #ffffff;">Draw Time: 6pm 23rd Feb. (&nbsp;<countdown-timer style="padding-top:5%;color:red;" (zeroTrigger)="afterCountDown()" [end]="newCount"></countdown-timer>&nbsp;)</small>
+                        <!-- </div> -->
+                        <div class="game-text-box">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter phone number here" minlength="11" maxlength="11" class="form-control" formControlName="mobile_no" #mobile_no />
+                            </div>
+                        </div>
+                <!-- <div class="each-game-body">
+                    <p>Just with a stake of <b>&#8358; 50</b>, you stand a chance of winning &#8358; {{each.category}} today. Draw time is 6pm!</p>
+                    <a [routerLink]="['categories']"><button type="submit" class="btn btn-primary" style="background-color:#0541E8">Play now</button></a>
+                </div> -->
+            </div>
+        <!-- </a> -->
+    </div>
+<div class="col-lg-4 col-sm-12 col-md-12">
+        <!-- <a [routerLink]="['categories']">   -->
+            <div class="mini-header1" style="background: darkorange;">
+                    <!-- <p>&#8358; {{each}} today<span style="float: right; margin-top: 1%">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </span>
+                    </p> -->
+                    <div class="sticker2"><h4 style="padding-right: auto;padding-top: 40%;"><b>Stake &#8358;50</b></h4></div>
+                    <h3 class="win-label2"><span style="color: darkorange">WIN </span> <span style="color: #fff;">&#8358;50,000</span></h3>
+                    <small style="float: right; padding-right: 2%;color: #ffffff;">Draw Time: 6pm 23rd Feb. (&nbsp;<countdown-timer style="padding-top:5%;color:black;" (zeroTrigger)="afterCountDown()" [end]="newCount"></countdown-timer>&nbsp;)</small>
+                    <div class="game-text-box">
+                        <div class="form-group">
+                            <input type="text" placeholder="Enter phone number here" minlength="11" maxlength="11" class="form-control" formControlName="mobile_no" #mobile_no />
+                        </div>
+                    </div>
+                <!-- <div class="each-game-body">
+                    <p>Just with a stake of <b>&#8358; 50</b>, you stand a chance of winning &#8358; {{each.category}} today. Draw time is 6pm!</p>
+                    <a [routerLink]="['categories']"><button type="submit" class="btn btn-primary" style="background-color:#0541E8">Play now</button></a>
+                </div> -->
+            </div>
+        <!-- </a> -->
+    </div>
+<div class="col-lg-4 col-sm-12 col-md-12">
+        <!-- <a [routerLink]="['categories']">   -->
+            <div class="mini-header1" style="background: purple;">
+                    <!-- <p>&#8358; {{each}} today<span style="float: right; margin-top: 1%">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </span>
+                    </p> -->
+                    <div class="sticker3"><h4 style="padding-right: auto;padding-top: 40%;"><b>Stake &#8358;100</b></h4></div>
+                    <h3 class="win-label3">WIN <span style="color: red;">&#8358;100,000</span></h3>
+                    <small style="float: right; padding-right: 2%;color: #ffffff;">Draw Time: 6pm 23rd Feb. (&nbsp;<countdown-timer style="padding-top:5%;color:red;" (zeroTrigger)="afterCountDown()" [end]="newCount"></countdown-timer>&nbsp;)</small>
+                    <div class="game-text-box">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter phone number here" minlength="11" maxlength="11" class="form-control" formControlName="mobile_no" #mobile_no />
+                            </div>
+                        </div>
+                <!-- <div class="each-game-body">
+                    <p>Just with a stake of <b>&#8358; 50</b>, you stand a chance of winning &#8358; {{each.category}} today. Draw time is 6pm!</p>
+                    <a [routerLink]="['categories']"><button type="submit" class="btn btn-primary" style="background-color:#0541E8">Play now</button></a>
+                </div> -->
+            </div>
+        <!-- </a> -->
+    </div>
+</div>
+<div class="body-row" style="margin-top: 4%;">
+        <div class="desktop-one">
+            <div id="each-desktop-frame">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" id="other_dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-home"></span>&nbsp; ABOUT US<span class="glyphicon glyphicon-chevron-down" style="float:right"></span></a>
+                    <ul id="other_dropdown_list" class="dropdown-menu">
+                        <p>Simple Lotto is a lottery platform that gives you a great chance to win <b>BIG</b> without stress. No permutation, no forecasting, no mathematics! Just enter your phone number to generate a lucky ticket number for each draw!</p>
+                        <p>
+                            All ticket numbers entered for a particular draw are collated and shuffled by our bespoke lottery machine and your ticket number could be one of the winning ticket numbers selected! If you play multiple times, you can win multiple times in a draw!
+                        </p>
+                        <a href="#"><button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0541E8; margin-top: 5%; margin-left: 6rem;">Ok, Got it!</button></a>
+                      </ul>
+                    </li>
+                    </ul>
+            </div>
+            <div id="each-desktop-frame">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" id="other_dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-gift"></span>&nbsp; BONUSES<span class="glyphicon glyphicon-chevron-down" style="float:right"></span></a>
+                    <ul id="other_dropdown_list" class="dropdown-menu">
+                        <p>You get <b>100% Welcome Bonus</b> on your first deposit and <b>20% Bonus</b> on subsequent deposits of <b>&#8358; 1,000</b> and above. Anytime you get a bonus on your deposit, both the main amount deposited and the bonus added would be merged together in your bonus account.</p>
+                        <p>
+                            Funds/stakes will be deducted from your bonus account first, before your main account <b>except</b> when there are no funds in the bonus account. Every time you win, your main account will be credited with your winnings instantly.
+                        </p>
+                        <a href="#"><button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0541E8; margin-top: 5%; margin-left: 6rem;">Ok, Got it!</button></a>
+                      </ul>
+                    </li>
+                    </ul>
+            </div>
+            <div id="each-desktop-frame">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" id="other_dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-time"></span>&nbsp; Monthly Jackpot<span class="glyphicon glyphicon-chevron-down" style="float:right"></span></a>
+                    <ul id="other_dropdown_list" class="dropdown-menu">
+                        <p>
+                            On the last day of every month, there is a Monthly Jackpot of <b>&#8358; 100,000</b>. This Monthly Jackpot is opened to everyone who played <b>at least once in that month</b>. All ticket numbers generated in that month are drawn and <b>1 (one)</b> ticket number is selected at random by our bespoke lottery machine.
+                        </p>
+                        <a href="#"><button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#0541E8; margin-top: 5%; margin-left: 6rem;">Ok, Got it!</button></a>
+                      </ul>
+                    </li>
+                    </ul>
+            </div>
+        <!-- <div class="col-lg-3 col-sm-12 col-md-12">
+            <a [routerLink]="['categories']">  
+                <div class="mini-links">
+                      <p>&#8358; {{each}} today<span style="float: right; margin-top: 1%">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                      </span>
+                      </p>
+                </div>
+              </a>
+      </div>
+      <div class="col-lg-3 col-sm-12 col-md-12">
+          <a [routerLink]="['categories']">  
+              <div class="mini-links">
+                    <p>&#8358; {{each}} today<span style="float: right; margin-top: 1%">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </span>
+                    </p>
+              </div>
+            </a>
+    </div> -->
+    </div>
+  </div>
+<!-- <ng-container *ngFor="let cat of all_categories">
+<ng-container *ngFor="let each of cat.category">
+    <div class="col-lg-3 col-sm-12 col-md-12" id="each-game-frame">
+        <div class="mini-header4">
+                <div class="game-text-box">
+                    <p> {{each.potential_returns | currency:"&#8358;"}} {{cat.day}}</p>
+                </div>
+        </div>
+        <div class="each-game-body">
+            <p>Just with a stake of <b> {{each.amt_to_stake | currency:"&#8358;"}}</b>, you stand a chance of winning &#8358; {{each.potential_returns}} today. Draw time is 6pm!</p>
+            <div *ngIf="date === cat.day">
+                <a [routerLink]="['./play/1']" [queryParams]="{id:each.game_id, stk:each.amt_to_stake}"><button type="submit" class="btn btn-primary" style="background-color:#0541E8">Play now</button></a>
+                <countdown-timer style="float: right;padding-top:5%;color:red;" (zeroTrigger)="afterCountDown()" [end]="newCount"></countdown-timer>
+            </div>
+        </div>
+    </div>   
+  </ng-container>
+</ng-container> -->
+</div>
+</section>
+</div>
+</div>

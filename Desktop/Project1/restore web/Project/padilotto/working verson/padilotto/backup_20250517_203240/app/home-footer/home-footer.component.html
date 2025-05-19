@@ -1,0 +1,16 @@
+<!-- Add error message display -->
+<div *ngIf="error" class="error-message">
+  {{ error }}
+</div>
+
+<!-- Add loading indicator -->
+<div *ngIf="loading" class="loading">
+  Loading...
+</div>
+
+<!-- Only show content when we have user data and no errors -->
+<div *ngIf="!loading && !error && user">
+  <!-- Your existing template content -->
+  <!-- Make sure to use safe navigation operator when accessing user_id -->
+  <span *ngIf="user?.user_id">{{ user.user_id }}</span>
+</div> 

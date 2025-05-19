@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "avid-wavelet-238703",
+  "private_key_id": "3bed93158908be3b9767009179e2bdca1a707e89",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC+I+g9CK+lAG1y\nejCW8wKIXitwT+oyIlzvhWfq64KH3EJRAxVPcHbK0WYlzcR2cGYJAPfp75of2gV4\nDOLUqepXZtwYWOaHDIPe2HHfsvMzjt/WL2ZGoXlV4JpBbq+pRmojHYHFJS40EQVR\nKI7VFkzK1lA6YP7AyBjOLS1ELxbk1vKqE1QKLbuOBvkOcCTioJy4zo6JBzxd9tLW\neKUC8CqETaf+34ktRqsuZ5BEoqv7paj6ErmS3R+W4FBuo1XiKOc98sIKd7UtVQ7k\n5lP/N/DzfGpnefSpOq9ScyJegDIcjmCAxPR5Z7hvVjQMK4cURJuiIl0dCUjssFSa\nIKsj7VQzAgMBAAECggEAKigm7SVYYDKUkZ2i2Uz+4kJSyj+FsuDojxiafj0CP2In\n9/NBjc/nHrfHuJkDNqlcDiH/VYhQuUArFz9wKWuU8BT3tpQ7ZHTzZfzCXrE799H1\nMfVnbUCO+Onn+ZrzaooYrTl1FMNWF6gwcBqYdIlRtGVI+3CW+yJCUbA1iZkRL+JQ\nQXHbqj+c/3eJuK6c4Plm6t4HQaY9udwLl/49FHiZTfW0MBB/yuGiLXTco2skjuKC\nfHwq0h0HdI4HlOIb36qySdN9Slce+OPy+h4K1hsDxPTI7MSlrv/pU+NFKKdOuVSv\nKGmtZnQLMTQSOQG3gxequddpKjzGSiSThnvdXpI3UQKBgQDyB5r5i9a0UscpawRb\n5N3M0/S9yGuZuJnFknjQHuxUpHrGVuAGgJrRF8vFQ8mfm7ShFMvuTuwCV9wQ/NlU\n8/Mdq+lubJMFD9vsa+/sX3W3rkhfSVKEKMkX/raC//LRmGLz5EBofln358KKu9wA\nkAPkpJWYtvGguOYc2h1Ea35zAwKBgQDJHYxbX18IBdke3zhHCdwUD/+haw3vXv3w\n9iFXCDDNAuj7FVCwPK7dErAWXmChAm6kNmD6Woornv3VGmQdEhIPAwi7/4+WQqYW\n8LZmJDteOY6IO10WZCx8s2tHZQcKgtLOK4ShHr++zHWAHwZo8q4S2eNuOdq5bOtE\nMjmCUgI7EQKBgHC7tiXSStmHTRkvrcIX4nALsg3MEsJxR77NMNTP8oiibEWCJash\nr/sAuHtTzdA4OHRnOW3w+OFGh0yqWZjGYFFLx9kVXY2YC3od9I0HEc/SsAciIftI\n/BHfJKf0C+gwsLaldJK3d7SPEQCJ7Dme2xFe0Adn/zg7p4N83PEHmMh9AoGANwpv\nL1Kan4d6NIjCzi5UnOkD/RlfZvOIbDnwRfFn6bOyL4VV3+W7taU3q+eIaohP34FC\naUH+LpIExh3C6HHZn2IlMc5vbaAv9HdMdAfWd6Mo7v/QKiCgTECOS6vKkYXcS7B9\nS9sufvlV7wqOpopEOcSICdKrmbPFb5SPSKtJEQECgYBjQ3yX/URlKaMKha9VrYYP\nKXfdcP0Mh/UwcnaOGycGCUWsmAjnTURTCcXUYcSYcmR/Wy1Sk3oTvTMSkBdvLH5E\n2gf731AWC0zMWUe+ipQbQpWvgLAwcFUVMpgpd1QwbQNQ348jjI1A/bQRztd1GXFZ\nSQPXoxvEjSmdOpabvjph3w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-analytics-api@avid-wavelet-238703.iam.gserviceaccount.com",
+  "client_id": "114012390509520957470",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-analytics-api%40avid-wavelet-238703.iam.gserviceaccount.com"
+}

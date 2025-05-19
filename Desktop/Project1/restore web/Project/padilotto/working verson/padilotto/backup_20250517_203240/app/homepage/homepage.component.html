@@ -1,0 +1,517 @@
+<app-navbar></app-navbar>
+<div style="height: 128px;"></div>
+<!-- banner-section start -->
+<section class="banner-section">
+  <div class="banner-content-area" style="background-color:white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="banner-content">
+            <h4 class="paragrah" style="color:  #0541e8">Win up to</h4>
+            <h1 class="title" style="color: #0541e8">&#8358;100,000</h1>
+            <h1 class="title" style="color: #0541e8">with your phone number!</h1>
+            <p class="paragrah" style="color:  #0541e8">
+              All you need to Play & Win is a Ticket ID. <br />Enter your phone number to get a
+              Ticket ID. When a draw closes, Our Bespoke Lottery Machine picks the winning Ticket
+              IDs. That`s all!
+            </p>
+            <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #0541e8; color: white"
+              ><b>PLAY NOW!</b></a
+            >
+          </div>
+        </div>
+        <swiper class="col-xs-0 col-md-6 d-flex justify-content-end mx-auto" [config]="homeBannerConfig">
+          <!-- Banner 1 -->
+          <div>
+            <img
+              [hidden]="isSmallScreen"
+              src="assets/images/A.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <!-- Banner 2 -->
+          <div>
+            <img
+              [hidden]="isSmallScreen"
+              src="assets/images/B.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <!-- Banner 3 -->
+          <div>
+            <img
+              [hidden]="isSmallScreen"
+              src="assets/images/C.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <!-- Banner 2 -->
+          <div>
+            <img
+              [hidden]="isSmallScreen"
+              src="assets/images/D.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <!-- Banner 2 -->
+          <div>
+            <img
+              [hidden]="isSmallScreen"
+              src="assets/images/E.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </swiper>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- banner-section end -->
+
+<!-- lottery-timer-section start -->
+<section
+  class="lottery-timer-section"
+  style="border-block-end-color: tomato; border-block-start-color: tomato; background-image: url(assets/images/jkp.jpg);color:white"
+>
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-xl-5">
+        <div class="timer-content">
+          <h3 class="title">Simple Monthly Jackpot</h3>
+          <p style="color:white">
+            This Jackpot is free and open to users who play Padi Lotto with &#8358;1000 and above,
+            monthly!
+          </p>
+        </div>
+      </div>
+      <div class="col-xl-5 text-center">
+        <div class="timer-part" style="margin-bottom:16px">
+          <app-flipclock></app-flipclock>
+        </div>
+      </div>
+      <div class="col-xl-2">
+        <div class="link-area text-center">
+          <div class="row align-items-center">
+            <div class="col-7 col-md-12">
+              <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" style="color:white" class="border-btn">register & play</a>
+            </div>
+            <div class="col-5 col-md-12">
+              <a href="bonuses" style="color:white" class="text-btn">view all offers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- lottery-timer-section end -->
+
+<!-- jackpot-section start -->
+<section class="jackpot-section section-padding" style="background-color: white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-header text-center">
+          <h2 class="section-title" style="color: #0541e8">Play Simple, Win Easy!</h2>
+          <p class="paragrah" style="color: #0541e8">
+            Click on a game category and enter your phone number to generate a Lucky Ticket ID. Your
+            Ticket ID qualifies you for the stated winning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pb-xs-4" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center bg"
+          style="background-image: url(assets/images/elements/win_S-06_1_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <p class="next-draw-time"> <span id="remainTime1"></span></p>
+          <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #22a072"> play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+      <div class="col-lg-4 col-md-6" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center pb-xs-4 bg"
+          style="background-image: url(assets/images/elements/win_S-01_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <p class="next-draw-time"> <span id="remainTime2"></span></p>
+          <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #f41982">play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+      <div class="col-lg-4 col-md-6" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center pb-xs-4 bg"
+          style="background-image: url(assets/images/elements/win_S-02_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <p class="next-draw-time"> <span id="remainTime2"></span></p>
+          <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #11a5ef">play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+      <div class="col-lg-12 text-center">
+        <a href="#" class="text-btn"></a>
+      </div>
+      <div class="col-lg-4 col-md-6" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center pb-xs-4 bg"
+          style="margin-bottom: 22px"
+          style="background-image: url(assets/images/elements/win_S-03_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <p class="next-draw-time"> <span id="remainTime2"></span></p>
+          <a href="#0" class="cmn-btn" style="background-color: #f70d4f">play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+      <div class="col-lg-4 col-md-6" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center pb-xs-4 bg"
+          style="background-image: url(assets/images/elements/win_S-04_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          
+          <p class="next-draw-time"> <span id="remainTime2"></span></p>
+          <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #5b07a5">play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+      <div class="col-lg-4 col-md-6" style="margin-bottom: 22px">
+        <div
+          class="jackpot-item text-center pb-xs-4 bg"
+          style="background-image: url(assets/images/elements/win_S-05_364x241.png"
+        >
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <br />
+          <p class="next-draw-time"> <span id="remainTime2"></span></p>
+          <a [routerLink]="['play']" [queryParams]="{id: nearestDrawId}" class="cmn-btn" style="background-color: #8c0913">play now!</a>
+        </div>
+      </div>
+      <!-- jackpot-item end -->
+    </div>
+  </div>
+</section>
+<!-- jackpot-section end -->
+
+<!-- work-steps-section strat -->
+<section
+  class="work-steps-section section-padding border-top"
+  style="color: #0541e8; margin-top: -25px;  background-color: white; border-inline-end-color: tomato"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="section-header text-center">
+          <h2 class="section-title" style="color: #0541e8">How to Play</h2>
+          <p style="color: #0541e8">
+            All you need to Play & Win is a Ticket ID. <br />Enter your phone number to get a Ticket
+            ID. When a draw closes, Our Bespoke Lottery Machine picks the winning Ticket IDs. That`s
+            all!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="work-steps-items-part d-flex">
+          <div class="line"><img src="assets/images/elements/line.png" alt="line-image" /></div>
+          <div class="work-steps-item">
+            <div class="work-steps-item-inner">
+              <div class="icon" style="background-color: #0541e8">
+                <img src="assets/images/svg-icons/how-work-icons/1.svg" alt="icon" />
+                <span class="count-num" style="background-color: tomato; color: white">01</span>
+              </div>
+              <h4 class="title" style="color: #0541e8">Ready?</h4>
+              <p style="color: #0541e8">
+                Log in / Register, fund your account and choose a game category.
+              </p>
+            </div>
+          </div>
+          <!-- work-steps-item end -->
+          <div class="work-steps-item">
+            <div class="work-steps-item-inner">
+              <div class="icon" style="background-color: #0541e8">
+                <img src="assets/images/svg-icons/how-work-icons/2.svg" alt="icon" />
+                <span class="count-num" style="background-color: tomato; color:white">02</span>
+              </div>
+              <h4 class="title" style="color: #0541e8">Set...</h4>
+              <p style="color: #0541e8">
+                Enter your phone number and click PLAY to generate your Lucky Ticket ID.
+              </p>
+            </div>
+          </div>
+          <!-- work-steps-item end -->
+          <div class="work-steps-item">
+            <div class="work-steps-item-inner">
+              <div class="icon" style="background-color: #0541e8">
+                <img src="assets/images/svg-icons/how-work-icons/3.svg" alt="icon" />
+                <span class="count-num" style="background-color: tomato; color: white">03</span>
+              </div>
+              <h4 class="title" style="color: #0541e8">Go!</h4>
+              <p style="color: #0541e8">
+                Your Lucky Ticket ID qualifies you for the stated winning! <a href="how-to-play">Click here to learn more.</a>
+              </p>
+            </div>
+          </div>
+          <!-- work-steps-item end -->
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="work-steps-thumb-part">
+          <img src="assets/images/ready.jpg" alt="work-step-image" />
+          <a
+            href="#"
+            data-rel="lightcase:myCollection"
+            class="play-btn"
+            style="background-color: #0541e8"
+            ><i class="fa fa-play"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- work-steps-section strat -->
+
+<!-- brand-section start -->
+<div
+  class="brand-section"
+  style="background-color: white; border-block-start-color: tomato; border-block-end-color: tomato"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-header text-center">
+          <h2 class="section-title" style="color: #0541e8">Why Padi Lotto?</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="brand-slider mb-4">
+          <swiper [config]="swiperConfig">
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    Fast<br />
+                    Payout
+                  </h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>Every time you win, your account is credited instantly!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+                    Permutations</h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>All you need to Play & Win Padi Lotto is your phone number!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front">
+                  <h4 class="title"style="text-align: center" style="font-size: 18px">
+                    Small<br />
+                    Stakes
+                  </h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>Stake as low as &#8358;25, win as high as &#8358;100,000</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front">
+                  <h4 class="title"style="text-align: center" style="font-size: 18px">
+                    Equal<br />
+                    Chances
+                  </h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>Our Bespoke Lottery Machine picks winning Ticket IDs at random.</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    Winners<br />
+                    Guaranteed
+                  </h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>Winners emerge everytime in all Padi Lotto Draws!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div class="choose-item text-center" style="background-color: #0541e8">
+                <div class="front" >
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">Multiple <br />Winnings</h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>You can win multiple times if you play multiple times in a draw</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- brand-section end -->
+
+<!-- brand-section start -->
+<div
+  class="brand-section"
+  style="background-color: white; border-block-start-color: tomato; border-block-end-color: tomato"
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-header text-center">
+          <h3 class="section-title" style="color: #0541e8">Simple Instant Play & Win</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="brand-slider">
+          <swiper [config]="swiperConfig">
+            <div class="single-slide">
+              <div
+                class="choose-item text-center"
+                style="background-image: url(assets/images/1s.jpg); background-repeat: no-repeat; background-position: center;background-size: cover"
+              >
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    <br />
+                    <br />
+                  </h4>
+                </div>
+                <div class="back" style="background-color: tomato">
+                  <p>Coming soon!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div
+                class="choose-item text-center"
+                style="background-image: url(assets/images/2s.jpg); background-repeat: no-repeat; background-position: center;background-size: cover"
+              >
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    <br />
+                    <br />
+                  </h4>
+                </div>
+                <div class="back" style="background-color: darkgreen">
+                  <p>Coming soon!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div
+                class="choose-item text-center"
+                style="background-image: url(assets/images/3s.jpg); background-repeat: no-repeat; background-position: center;background-size: cover"
+              >
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    <br />
+                    <br />
+                  </h4>
+                </div>
+                <div class="back" style="background-color: purple">
+                  <p>Coming soon!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+            <div class="single-slide">
+              <div
+                class="choose-item text-center"
+                style="background-image: url(assets/images/4s.jpg); background-repeat: no-repeat; background-position: center;background-size: cover"
+              >
+                <div class="front">
+                  <h4 class="title" style="text-align: center" style="font-size: 18px">
+                    <br />
+                    <br />
+                  </h4>
+                </div>
+                <div class="back" style="background-color: darkblue">
+                  <p>Coming soon!</p>
+                </div>
+              </div>
+            </div>
+            <!-- choose-item end -->
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- brand-section end -->
+
+<!-- Footer start -->
+<app-home-footer></app-home-footer>
+<!-- Footer end -->

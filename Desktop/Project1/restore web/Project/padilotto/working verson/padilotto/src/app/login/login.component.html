@@ -1,0 +1,72 @@
+<!-- Login Page Container -->
+<div class="login-container">
+  <ngx-loading [show]="loading"></ngx-loading>
+  
+  <!-- Login Form -->
+  <div class="login-form" *ngIf="!forgotPwd">
+    <h3><span class="glyphicon glyphicon-log-in"></span>&nbsp; LOG IN</h3>
+    <small class="text-danger">*Fields are case sensitive</small>
+    <flash-messages></flash-messages>
+    
+    <form [formGroup]="angForm" (ngSubmit)="loginSubmit()">
+      <div class="form-group">
+        <label>Username / Phone number</label>
+        <input type="text" class="form-control" formControlName="username" minlength="3">
+        <div class="error-message" *ngIf="angForm.get('username').invalid && (angForm.get('username').dirty || angForm.get('username').touched)">
+          <div *ngIf="angForm.get('username').errors?.required">
+            Username is required (Not less than 3 letters).
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" minlength="6">
+        <div class="error-message" *ngIf="angForm.get('password').invalid && (angForm.get('password').dirty || angForm.get('password').touched)">
+          <div *ngIf="angForm.get('password').errors?.required">
+            Password is required (Not less than 6 characters).
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">
+          Log in
+        </button>
+        <div class="form-links">
+          <a class="forgot-password" (click)="forgotPassword()">Forgot Password?</a>
+          <p>Don't have an account? <a [routerLink]="['/register']">register now!</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Reset Password Form -->
+  <div class="reset-form" *ngIf="forgotPwd">
+    <h3><span class="glyphicon glyphicon-lock"></span>&nbsp;FORGOT PASSWORD</h3>
+    <flash-messages></flash-messages>
+    <small class="text-danger">*Enter your registered email address / Phone number</small>
+    
+    <form [formGroup]="resetFormField" (ngSubmit)="resetSubmit()">
+      <div class="form-group">
+        <label>Email Address / Phone number</label>
+        <input type="text" class="form-control" formControlName="username" minlength="9" autofocus>
+        <div class="error-message" *ngIf="resetFormField.get('username').invalid && (resetFormField.get('username').dirty || resetFormField.get('username').touched)">
+          <div *ngIf="resetFormField.get('username').errors?.required">
+            Enter registered e-mail address or phone number.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="resetFormField.pristine || resetFormField.invalid">
+          Reset
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-home-footer></app-home-footer>
+<!-- Mobile Login Form - Hidden in favor of responsive design -->
+<!-- We're removing the duplicate mobile form and making our main form responsive -->
+<!-- This prevents code duplication and ensures consistent user experience -->

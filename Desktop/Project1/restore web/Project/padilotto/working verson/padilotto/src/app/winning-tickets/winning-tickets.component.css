@@ -1,0 +1,16 @@
+#winning-frame{
+    line-height: 20px;
+/*    border: 1px solid #555555; */
+    border-radius: 4px;
+    padding: 1% 2%;
+    display: inline-block;
+    background-color: #f5f6fa;
+    box-shadow: 0 0 10px #164099;
+    -webkit-box-shadow: 0 0 10px #164099;
+    margin-bottom: 2%;
+    font-weight: 500;
+}
+
+#winning-frame li{
+    list-style: none;
+}

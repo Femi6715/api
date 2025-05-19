@@ -1,0 +1,49 @@
+<!-- Add Flutterwave script -->
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+
+<!-- Payment Form -->
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh; padding: 200px 0 50px 0;">
+  <div class="row justify-content-center w-100">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-light py-4">
+          <h3 class="text-center mb-0">Confirm Payment</h3>
+        </div>
+        <div class="card-body p-5">
+          <form #paymentForm="ngForm" (ngSubmit)="onSubmit(paymentForm)">
+            <div class="form-group mb-4">
+              <div class="d-flex align-items-center mb-2">
+                <label for="amount" class="form-label fw-bold mb-0 me-2">Amount (₦)</label>
+                <input type="number" class="form-control form-control-lg" id="amount" name="amount" [(ngModel)]="depositAmount" readonly>
+              </div>
+              <small class="text-muted mt-2 d-block">Amount cannot be modified. Please return to deposit page to change the amount.</small>
+            </div>
+
+            <div class="d-grid gap-3 mt-5">
+              <button type="submit" class="btn btn-primary btn-lg py-3" [disabled]="!paymentForm.valid || loading">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm me-2"></span>
+                Pay Now
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-lg py-3" routerLink="/deposit">
+                Change Amount
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Ensure Flutterwave is loaded
+  window.addEventListener('load', function() {
+    if (typeof window.FlutterwaveCheckout === 'undefined') {
+      console.error('Flutterwave script not loaded properly');
+    } else {
+      console.log('Flutterwave script loaded successfully');
+    }
+  });
+</script>
+
+<app-home-footer></app-home-footer>

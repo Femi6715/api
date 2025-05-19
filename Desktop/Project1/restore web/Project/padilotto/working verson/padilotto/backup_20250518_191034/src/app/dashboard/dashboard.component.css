@@ -1,0 +1,140 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome-section {
+  background: linear-gradient(135deg, #0541e8 0%, #1a237e 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+  margin: 0 0 20px 0;
+  font-size: 2em;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.info-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.quick-actions {
+  margin-bottom: 30px;
+}
+
+.quick-actions h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #0541e8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.action-btn i {
+  font-size: 1.2em;
+}
+
+.stats-section {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.stats-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card i {
+  font-size: 2em;
+  color: #0541e8;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  margin: 10px 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+  }
+  
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+} 
