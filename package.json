@@ -18,6 +18,7 @@
     "ejs": "2.6.1",
     "email-templates": "^2.7.1",
     "express": "4.21.2",
+    "express-session": "^1.17.3",
     "googleapis": "^39.2.0",
     "handlebars": "^4.1.2",
     "helmet": "^3.18.0",

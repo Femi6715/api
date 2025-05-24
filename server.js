@@ -4,6 +4,7 @@ const passport = require('passport');
 const config = require('./config/database');
 const mysql = require('mysql2/promise');
 const path = require('path');
+const session = require('express-session');
 
 // Create MySQL connection pool with error handling
 const pool = mysql.createPool(config.database);
@@ -51,6 +52,17 @@ app.use(express.urlencoded({ extended: true }));
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Session configuration
+app.use(session({
+  secret: config.secret,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
