@@ -1,5 +1,46 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+**/data/GOOGLE-ANALYTICS-API.json
+**/key
+**/key.pub
+**/*.asc
+**/_netrc
+**/pgp/
+**/*.sql
+**/*.log
+**/ntuser.*
+**/desktop.ini
+
+# Backup files
+backup_*/
+backups/
+
 # compiled output
 /dist
 /tmp
@@ -29,8 +70,6 @@
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
 testem.log
 /typings
 
