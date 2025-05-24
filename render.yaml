@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: padilotto-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: padilotto_secure_jwt_secret_2024
+      - key: DB_HOST
+        value: 27gi4.h.filess.io
+      - key: DB_USER
+        value: Padilotto_wordrushof
+      - key: DB_PASSWORD
+        value: d030caf65b4e0827f462ebbca5a2aaeff45bf969
+      - key: DB_NAME
+        value: Padilotto_wordrushof
+      - key: DB_PORT
+        value: 3307 
