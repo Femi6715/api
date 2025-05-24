@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  adminAPI: 'http://localhost:8080/users',
-  apiUrl: 'http://localhost:8080'
+  adminAPI: 'https://api-awbv.onrender.com/users',
+  apiUrl: 'https://api-awbv.onrender.com'
 };

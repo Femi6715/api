@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  adminAPI: 'http://localhost:8080/users',
-  apiUrl: 'http://localhost:8080',
+  adminAPI: 'https://api-awbv.onrender.com/users',
+  apiUrl: 'https://api-awbv.onrender.com',
   useLocalDatabase: true,
   databasePath: './padilotto.db'
 };
