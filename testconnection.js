@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const mongoURI = process.env.MONGO_URI || 
-  'mongodb+srv://admin:62221085@padi.rfdah5x.mongodb.net/padi?retryWrites=true&w=majority&appName=padi';
+  ';
 
 mongoose.set('debug', true); // Enable Mongoose debug mode
 
